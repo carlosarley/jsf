@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 26-jul-2018 21:08:15 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.corfillanos.modelo.Categoria" table="categoria" catalog="solicitudcredito" optimistic-lock="version">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <property name="categoria" type="string">
+            <column name="categoria" length="45" not-null="true" />
+        </property>
+        <set name="clienteses" table="clientes" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="categoria_id" not-null="true" />
+            </key>
+            <one-to-many class="com.corfillanos.modelo.Clientes" />
+        </set>
+    </class>
+</hibernate-mapping>

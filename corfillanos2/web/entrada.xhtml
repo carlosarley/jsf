@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Corfillanos Page</title>
+   </h:head>
+   
+    <h:body>
+        <center>
+        <h:link outcome="salida" value="datos salida" />
+        
+        <h:form ><br/><br/>
+              
+                <p:messages autoUpdate="true" />
+                <p:panelGrid styleClass="panelGridCenter" columns="2">
+                    <f:facet name="header"> Ingreso de usuario</f:facet>  
+                    
+                      <p:outputLabel for="txtcategoria" value="Categoria"/>
+                    <p:inputText id="txtcategoria" required="true"></p:inputText>
+                   
+                    <p:outputLabel for="txtnombres" value="Nombres"/>
+                    <p:inputText id="txtnombres" required="true"></p:inputText>
+                 
+                    
+                     <p:outputLabel for="txtapellidos" value="Apellidos"/>
+                    <p:inputText id="txtapellidos" required="true"></p:inputText>
+                    
+                    <p:outputLabel  value="Tipo de Documento"/>
+                    <p:selectOneMenu value="tipo de documento" required="true">
+                        
+                           <f:selectItem itemValue="selecione" itemLabel="Seleccione"  />
+                           <f:selectItem itemValue="cedula" itemLabel="Cedula De Ciudadania" />
+                           <f:selectItem itemValue="pasaporte" itemLabel="Pasaporte" />
+                           <f:selectItem itemValue="extranjeria" itemLabel="Cedula De Extranjeria" />
+                   </p:selectOneMenu>  
+                    
+                       <p:outputLabel for="txtdocumento" value="Numero De Documento"/>
+                    <p:inputText id="txtdocumento" required="true"></p:inputText>
+                    
+                
+                    
+                    
+                    <p:outputLabel for="txtFechaNacimiento" value="Fecha de Nacimiento"/>
+                    <p:inputText id="txtFechaNacimiento" required="true"></p:inputText>
+                    
+                    
+                     <p:outputLabel for="txtlugarNacimiento" value="Lugar De Nacimiento"/>
+                    <p:inputText id="txtlugarNacimiento" required="true"></p:inputText>
+                    
+
+                     <p:outputLabel for="txtdireccion" value="Direccion"/>
+                    <p:inputText id="txtdireccion" required="true"></p:inputText>
+                                        
+
+                     <p:outputLabel for="txttelefono" value="Telefono"/>
+                    <p:inputText id="txttelefono" required="true"></p:inputText>
+                                        
+
+                    
+                     <p:outputLabel  value="Tipo de Contrato"/>
+                    <p:selectOneMenu value="Tipo de Contrato" >
+                        
+                           <f:selectItem itemValue="selecione" itemLabel="Seleccione"  />
+                           <f:selectItem itemValue="indefinido" itemLabel="Termino Indefinido" />
+                           <f:selectItem itemValue="fijo" itemLabel="Termino Fijo" />
+                           <f:selectItem itemValue="contratista" itemLabel="Contratista" />
+                   </p:selectOneMenu>
+                                        
+
+                     <p:outputLabel for="txtempresa" value="Nombre De La Empresa"/>
+                    <p:inputText id="txtempresa"></p:inputText>
+                                        
+
+                    
+                     <p:outputLabel for="txtcargo" value="Cargo que Desempeña En la Empresa"/>
+                    <p:inputText id="txtcargo" ></p:inputText>
+                                        
+
+                    
+                     <p:outputLabel for="txttiempo" value="Tiempo De Duracion En La Empresa"/>
+                    <p:inputText id="txttiempo" required="false"></p:inputText>
+                                        
+
+                     <p:outputLabel for="txtingreso" value="Fecha De Ingreso"/>
+                    <p:inputText id="txtingreso" required="false"></p:inputText>
+                                        
+
+                    
+                     <p:outputLabel for="txtegreso" value="Fecha de Retiro"/>
+                    <p:inputText id="txtegreso" required="false"></p:inputText>
+                                        
+
+                    
+                     <p:outputLabel  value="Tipo de Credito"/>
+                    <p:selectOneMenu value="categoria" required="true">
+                        
+                           <f:selectItem itemValue="selecione" itemLabel="Seleccione"  />
+                           <f:selectItem itemValue="libreinvercion" itemLabel="Credito de libre invercion" />
+                           <f:selectItem itemValue="hipotecario" itemLabel="Credito Hipotecario" />
+                           <f:selectItem itemValue="estudiantil" itemLabel="Credito Para Estudio" />
+                   </p:selectOneMenu> 
+                   
+
+                    
+                     <p:outputLabel for="txtmontoSolic" value="Monto Solicitado"/>
+                    <p:inputText id="txtmontoSolic" required="true"></p:inputText>
+                                        
+
+                    
+                    
+                     <p:outputLabel for="txtplasoMes" value="Plazo Mes"/>
+                    <p:inputText id="txtplasoMes" required="true"></p:inputText>
+                                        
+
+                    
+                    
+                      <p:outputLabel for="txtterminos" value="Terminos"/>
+                    <p:inputText id="txtterminos" required="true"></p:inputText>
+                                        
+
+                    
+                    <f:facet name="footer">
+                        <p:commandButton icon="ui-icon-key" value="Guardar"></p:commandButton>
+                    </f:facet>
+                    
+                </p:panelGrid>
+               
+            </h:form>   
+        </center>
+    </h:body>
+
+</html>
+

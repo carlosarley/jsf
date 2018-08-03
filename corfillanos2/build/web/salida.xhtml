@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Corfillanos Page</title>
+    </h:head>
+    <h:body>
+         <%@page import="com.corfillanos.modelo.Clientes" %>
+        <center>
+        Hello from Facelets
+        <h:link outcome="entrada" value="Usuario Registrado" />
+       
+         <h Clientes cliente = (Clientes) request.getAttribute("atribClientes");</h>
+         <h:form><br/><br/>
+             <p:messages autoUpdate="true" />
+             <p:panelGrid columns="2">
+              
+                 <f:facet name="header">mostrar registro</f:facet>
+                 
+              
+                 
+                 <p:outputLabel for="txtcategoria" value="Categoria"/>
+                 <p:outputLabel id="txtcategoria" value="#{com.corfillanos.modelo.Clientes.categoria}" ></p:outputlabel>
+              
+                 <p:outputLabel for="txtnombres" value="Nombres"/>
+                 <p:outputLabel id="txtnombres" value="#{com.corfillanos.modelo.Clientes.nombres}" ></p:outputLabel>
+                 
+                    
+                <p:outputLabel for="txtapellidos" value="Apellidos"/>
+                <p:outputLabel id="txtapellidos" value="#{com.corfillanos.modelo.Clientes.apellidos}" ></p:outputLabel>
+                    
+                <p:outputLabel  value="Tipo de Documento"/>
+                <p:outputLabel id="txtipoid" value="#{com.corfillanos.modelo.Clientes.Tipoid}" ></p:outputLabel>
+                    
+                    
+                <p:outputLabel for="txtdocumento" value="Numero De Documento"/>
+                <p:outputLabel id="txtdocumento" value="#{com.corfillanos.modelo.Clientes.identificacion}" ></p:outputLabel>
+                      
+                <p:outputLabel for="txtFechaNacimiento" value="Fecha de Nacimiento"/>
+                <p:outputLabel id="txtFechaNacimiento" value="#{com.corfillanos.modelo.Clientes.fechaNacimiento}" ></p:outputLabel>
+                    
+                    
+                <p:outputLabel for="txtlugarNacimiento" value="Lugar De Nacimiento"/>
+                <p:outputLabel id="txtlugarNacimiento" value="#{com.corfillanos.modelo.Clientes.lugarNacimiento}" ></p:outputLabel>
+                    
+                    
+
+                     <p:outputLabel for="txtdireccion" value="Direccion"/>
+                    <p:outputLabel id="txtdireccion" value="#{com.corfillanos.modelo.Clientes.direccion}" ></p:outputLabel>
+                                        
+
+                     <p:outputLabel for="txttelefono" value="Telefono"/>
+                    <p:outputLabel id="txttelefono" value="#{com.corfillanos.modelo.Clientes.telefono}" ></p:outputLabel>
+                                        
+
+                    
+                     <p:outputLabel  value="Tipo de Contrato"/>
+                    <p:outputLabel id="txttipoContrato" value="#{com.corfillanos.modelo.Clientes.tipoCont}" ></p:outputLabel>
+                                        
+
+                     <p:outputLabel for="txtempresa" value="Nombre De La Empresa"/>
+                   <p:outputLabel id="txtempresa" value="#{com.corfillanos.modelo.Clientes.empresa}" ></p:outputLabel>
+                                        
+
+                    
+                     <p:outputLabel for="txtcargo" value="Cargo que Desempeña En la Empresa"/>
+                    <p:outputLabel id="txtcargo" value="#{com.corfillanos.modelo.Clientes.cargo}" ></p:outputLabel>
+                                        
+
+                    
+                     <p:outputLabel for="txttiempo" value="Tiempo De Duracion En La Empresa"/>
+                   <p:outputLabel id="txttiempo" value="#{com.corfillanos.modelo.Clientes.tiempo}" ></p:outputLabel>
+                                        
+
+                     <p:outputLabel for="txtingreso" value="Fecha De Ingreso"/>
+                    <p:outputLabel id="txtingreso" value="#{com.corfillanos.modelo.Clientes.ingreso}" ></p:outputLabel>
+                                        
+
+                    
+                     <p:outputLabel for="txtegreso" value="Fecha de Retiro"/>
+                    <p:outputLabel id="txtegreso" value="#{com.corfillanos.modelo.Clientes.egreso}" ></p:outputLabel>
+                                        
+
+                    
+                     <p:outputLabel  value="Tipo de Credito"/>
+                    <p:outputLabel id="txttipoCredit" value="#{com.corfillanos.modelo.Clientes.tipoCredit}" ></p:outputLabel>
+
+                    
+                     <p:outputLabel for="txtmontoSolic" value="Monto Solicitado"/>
+                    <p:outputLabel id="txtmontoSolic" value="#{com.corfillanos.modelo.Clientes.montoSolic}" ></p:outputLabel>
+                                        
+
+                    
+                    
+                     <p:outputLabel for="txtplasoMes" value="Plazo Mes"/>
+                    <p:outputLabel id="txtplasoMes" value="#{com.corfillanos.modelo.Clientes.plazoMes}" ></p:outputLabel>
+                                        
+
+                    
+                    
+                      <p:outputLabel for="txtterminos" value="Terminos"/>
+                    <p:outputLabel id="txtterminos" value="#{com.corfillanos.modelo.Clientes.terminos}" ></p:outputLabel>
+                                        
+
+             </p:panelGrid>
+         </h:form>
+         </center>
+    </h:body>
+</html>
+
